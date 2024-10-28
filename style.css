@@ -1,0 +1,220 @@
+/* General Styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #222;
+}
+
+/* Header and Navigation */
+
+header {
+    background-color: #3c096c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: #e0aaff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0aaff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff99c8;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #7209b7, #4cc9f0);
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ff99c8;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: #d68caa;
+}
+
+/* Section Styling */
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#about, #experience, #projects, #contact {
+    background: #e0aaff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 30px;
+    padding: 20px;
+}
+
+/* Experience and Project Card Styles */
+
+.experience-cards, .project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.experience-card, .project-card {
+    width: 280px;
+    background-color: #2a0655;
+    color: #e0aaff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Initially hidden for fade-in effect */
+    transform: translateY(20px); /* Slide-in effect */
+}
+
+.experience-card.visible, .project-card.visible {
+    opacity: 1; /* Fade-in when visible */
+    transform: translateY(0); /* Reset slide */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-card:hover, .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card h3, .project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #ff99c8;
+}
+
+.experience-card span, .project-card span {
+    font-weight: bold;
+    color: #4cc9f0;
+}
+
+.project-card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.experience-card p, .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e0aaff;
+}
+
+.experience-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the same text color */
+}
+
+.experience-link:hover .experience-card {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Enhances hover effect */
+    transform: translateY(-6px); /* Slight hover lift */
+    cursor: pointer;
+}
+
+.project-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the same text color */
+}
+
+.project-link:hover .project-card {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhances hover effect */
+    transform: translateY(-8px); /* Adds hover lift */
+    cursor: pointer;
+}
+
+/* Modal Styling */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff99c8;
+}
+
+/* Footer Styling */
+
+footer {
+    background-color: #3c096c;
+    color: #e0aaff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
