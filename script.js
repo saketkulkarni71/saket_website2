@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -10,12 +10,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Form submission logic
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const message = document.getElementById('message').value;   
     if (name && email && message) {
         alert(`Thank you, ${name}! Your message has been sent.`);
     } else {
@@ -36,7 +35,6 @@ const fadeInOnScroll = () => {
 window.addEventListener('scroll', fadeInOnScroll);
 fadeInOnScroll(); // Trigger once on page load
 
-// PDF Modal logic
 const modal = document.getElementById('pdfModal');
 const modalClose = document.querySelector('.close');
 const pdfViewer = document.getElementById('pdfViewer');
